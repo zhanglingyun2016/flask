@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book页面</title>
+</head>
+<body>
+  <center>
+      <h1>flask框架,book数据</h1>
+      <a href="/add">添加图书</a>
+      <table border="1px" width="800px">
+          <tr>
+              <td>id</td>
+              <td>userName</td>
+              <td>password</td>
+              <td>操作</td>
+          </tr>
+          {% for i in data %}
+          <tr>
+              <td>{{ i.id }}</td>
+              <td>{{ i.userName }}</td>
+              <td>{{ i.password }}</td>
+              <td><a href="/delete?id={{ i.id }}">删除</a></td>
+          </tr>
+          {% endfor %}
+
+
+      </table>
+  </center>
+</body>
+</html>
